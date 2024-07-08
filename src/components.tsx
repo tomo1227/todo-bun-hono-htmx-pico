@@ -21,7 +21,11 @@ const TodoApp = () => {
           <main class="container">
             <h1 class="pico-color-pink-500">Welcome!</h1>
             <h1>Hono & Bun & htmx & Pico CSS Todo App</h1>
-            <form hx-post="/todo" hx-target="#todos">
+            <form
+              hx-post="/todo"
+              hx-target="#todos"
+              {...{ "hx-on::after-request": "this.reset()" }}
+            >
               <input
                 id="todo"
                 name="todo"
