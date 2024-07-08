@@ -26,6 +26,7 @@ const TodoApp = () => {
                 id="todo"
                 name="todo"
                 type="text"
+                required="true"
                 placeholder="ここにタスクを入力"
               />
               <button type="submit">ADD TASK</button>
