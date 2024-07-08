@@ -16,3 +16,5 @@ echo 'export PATH="$HOME/.bun/bin:$PATH"' >> ~/.bashrc
 curl -fsSL https://bun.sh/install | bash
 
 . ~/.bashrc
+
+bun i
