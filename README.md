@@ -1,6 +1,6 @@
 # devcontainer_template
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/tomo1227/template_bun/actions/workflows/ci.yml/badge.svg)](https://github.com/tomo1227/template_bun/actions/workflows/ci.yml) [![CodeQL](https://github.com/tomo1227/template_bun/actions/workflows/code_ql.yml/badge.svg)](https://github.com/tomo1227/template_bun/actions/workflows/code_ql.yml) 
 
 Hono & Bun & htmx & Pico CSS で Todo Appアプリを作成してみました。
 
