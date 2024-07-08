@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "scripts": {
+    "dev": "bun run --hot src/index.tsx"
+  },
+  "dependencies": {
+    "@picocss/pico": "^2.0.6",
+    "hono": "^4.4.12",
+    "htmx.org": "^1.9.12",
+    "typed-htmx": "^0.3.1"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

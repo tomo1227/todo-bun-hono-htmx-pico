@@ -6,6 +6,13 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.markdownlint": "explicit"
   },
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.insertFinalNewline": true
+  },
   "editor.rulers": [120],
   "[markdown]": {
     "editor.formatOnSave": true,
@@ -16,8 +23,16 @@
   "markdownlint.run": "onSave",
   "markdownlint.config": {
     "MD025": false,
-    "MD033": false
+    "MD033": false,
+    "MD034": false
   },
+  "markdown.extension.print.theme": "dark",
+  "markdown.copyFiles.destination": {
+    "**/*": "../media/img/img.${fileExtName}"
+  },
+  "markdown-preview-enhanced.codeBlockTheme": "solarized-light.css",
+  "markdown.extension.toc.unorderedList.marker": "*",
+  "markdown.extension.orderedList.marker": "one",
   "[jsonc][json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.insertSpaces": true,
@@ -48,12 +63,7 @@
     "editor.formatOnSave": true,
     "files.insertFinalNewline": true
   },
-  "cSpell.words": [
-    "Codecov",
-    "devcontainer",
-    "devcontainers",
-    "dockercompose"
-  ],
+  "cSpell.words": ["Codecov", "devcontainer", "devcontainers", "dockercompose"],
   "todo-tree.general.tags": [
     "HACK",
     "FIXME",
@@ -202,9 +212,6 @@
       "description": "メトリクスやログの追加/改善"
     }
   ],
-  "cSpell.ignorePaths": [
-    ".vscode",
-    ".devcontainer/devcontainer.json",
-  ],
+  "cSpell.ignorePaths": [".vscode", ".devcontainer/devcontainer.json"],
   "errorLens.excludeBySource": ["cSpell"]
 }

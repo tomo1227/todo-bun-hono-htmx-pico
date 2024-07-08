@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "typed-htmx/typed-html",
+    "module": "node16",
+    "moduleResolution": "node16"
+  }
+}
