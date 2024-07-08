@@ -17,10 +17,9 @@
         "otovo-oss.htmx-tags",
         "ChakrounAnas.turbo-console-log",
         "formulahendry.auto-rename-tag",
-        // yaml, jsonc, json, toml
+        // yaml, jsonc, json
         "redhat.vscode-yaml",
         "esbenp.prettier-vscode",
-        "tamasfe.even-better-toml",
         // Git関連
         "mhutchie.git-graph",
         "eamodio.gitlens",
