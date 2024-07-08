@@ -1,15 +1,12 @@
 import { Hono } from "hono";
 import "typed-htmx";
-import TodoApp from "./components";
+import TodoApp from "./components/TodoApp";
+import Task from "./components/Task";
+import Todo from "./components/Todo";
 
 const app = new Hono();
 
 let todos: Todo[] = [];
-
-interface Todo {
-  key: number;
-  text: string;
-}
 
 app.get("/", (c) => {
   return c.html(<TodoApp />);
@@ -17,8 +14,10 @@ app.get("/", (c) => {
 
 app.post("/todo", async (c) => {
   const formData = await c.req.parseBody();
+  const newId =
+    todos.length > 0 ? Math.max(...todos.map((todo) => todo.id)) + 1 : 1;
   const newTodo = {
-    key: todos.length + 1,
+    id: newId,
     text: formData.todo as string,
   };
   todos.push(newTodo);
@@ -26,38 +25,10 @@ app.post("/todo", async (c) => {
   return c.html(<Task todos={todos} />);
 });
 
-app.get("/todo", (c) => {
-  return c.html(<Task />);
-});
-
-app.delete("/delete/:key", (c) => {
-  const key: number = parseInt(c.req.param().key, 10);
-  todos = todos.filter((todo) => todo.key !== key);
+app.delete("/delete/:id", (c) => {
+  const id: number = parseInt(c.req.param().id, 10);
+  todos = todos.filter((todo) => todo.id !== id);
   return c.html(<Task todos={todos} />);
 });
-
-const Task = () => {
-  return (
-    <article class="container">
-      {todos.map((todo) => (
-        <section class="grid">
-          <div key={todo.key.toString()} class="card">
-            <strong>{todo.text}</strong>
-          </div>
-          <div></div>
-          <button
-            type="reset"
-            class="pico-background-red-450"
-            hx-delete={`/delete/${todo.key}`}
-            hx-target="closest article"
-            hx-swap="outerHTML"
-          >
-            DELETE
-          </button>
-        </section>
-      ))}
-    </article>
-  );
-};
 
 export default app;
