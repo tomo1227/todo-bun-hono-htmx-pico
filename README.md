@@ -4,6 +4,10 @@
 
 Hono & Bun & htmx & Pico CSS で Todo Appアプリを作成してみました。
 
+# Demo
+
+![alt text](./media/todo.gif)
+
 ## Usage
 
 ### Local
