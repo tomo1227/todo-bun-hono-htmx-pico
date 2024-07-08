@@ -6,11 +6,22 @@ Hono & Bun & htmx & Pico CSS で Todo Appアプリを作成してみました。
 
 ## Usage
 
+### Local
+
+1. https://bun.sh/docs/installation から `bun`をインストールしてください。
+1. `bun i`
+1. `bun run dev`
+1. http://localhost:3000/ を開く
+
+### Dev-Container
+
+Dev-Containerを立ち上げて、以下のコマンドを叩いてください。
+
 ```sh
 bun run dev
 ```
 
-http://localhost:3000/ (もしくは、自分で指定したポート) にアクセスする。
+http://localhost:3000/ (もしくは、自分で指定したポート) を開く
 
 ### 環境変数の変更
 
